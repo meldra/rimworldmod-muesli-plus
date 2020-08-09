@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Watermelons</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="RAW_WATERMELON_RESOURCE_DEF"]</xpath>
+					<value>
+						<thingCategories Inherit="false">
+							<li>Muesli_Fruits</li>
+						</thingCategories>
+					</value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+	
+	<Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Watermelons</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+				<li Class="PatchOperationFindMod">
+					<mods>
+						<li>Vanilla Plants Expanded</li>
+					</mods>
+					<match Class="PatchOperationSequence">
+						<success>Always</success>
+						<operations>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThingDef[defName="RAW_WATERMELON_RESOURCE_DEF"]/thingCategories</xpath>
+								<value>
+									<thingCategories Inherit="false">
+										<li>VCE_Fruit</li>
+									</thingCategories>
+								</value>
+							</li>
+						</operations>
+					</match>
+				</li>
+            </operations>
+        </match>
+    </Operation>
+		
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Watermelons</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+				<li Class="PatchOperationFindMod">
+					<mods>
+						<li>VGP Vegetable Garden</li>
+					</mods>
+					<match Class="PatchOperationSequence">
+						<success>Always</success>
+						<operations>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThingDef[defName="RAW_WATERMELON_RESOURCE_DEF"]/thingCategories</xpath>
+								<value>
+									<thingCategories Inherit="false">
+										<li>FruitFoodRaw</li>
+									</thingCategories>
+								</value>
+							</li>
+						</operations>
+					</match>
+				</li>
+            </operations>
+        </match>
+    </Operation>
+	
+	<Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Watermelons</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                	 <li Class="PatchOperationFindMod">
+						<mods>
+							<li>[1.0, 1.1] RimCuisine 2 Core</li>
+						</mods>
+						<match Class="PatchOperationSequence">
+							<success>Always</success>
+							<operations>
+								<li Class="PatchOperationReplace">
+									<xpath>/Defs/ThingDef[defName="RAW_WATERMELON_RESOURCE_DEF"]/thingCategories</xpath>
+									<value>
+										<thingCategories Inherit="false">
+											<li>RC2_FruitsRaw</li>
+										</thingCategories>
+									</value>
+								</li>
+							</operations>
+						</match>
+					</li>
+            </operations>
+        </match>
+    </Operation>
+
+</Patch>

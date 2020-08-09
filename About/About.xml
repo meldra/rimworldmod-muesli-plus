@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+    <name>Muesli+</name>
+    <author>elkyelky</author>
+    <packageId>elkyelky.Muesli.Plus</packageId>
+    <supportedVersions>
+      <li>1.1</li>
+	  <li>1.2</li>
+    </supportedVersions>
+    <description>This mod adds a recipe for Muesli to the campfire and stoves. The recipes require both some fruit and some grain. Unlike the original Muesli mod, this version does try to use fruits or grains added in other mods. This is intended to be like a vegan version of pemmican for those who want an early game travel-friendly option that doesn't need meat.
+
+Since cereal is less calorie dense than meat and fat, the nutritional value is slightly lower and work needed is slightly higher. It also costs less.
+	
+Compatibility currently attempted with the following:
+
+VGP Vegetable Garden ^*
+Vanilla Plants Extended ^*
+RimCuisine 2 Core *
+Dragonfruit ^
+Watermelons ^
+	
+^ indicates mods for which I do some additional categorization. While I've done my best, errors about duplicated XML might still arise if you try to use multiple of the *'d mods, and the categories will almost certainly be a mess of duplicates. RC2 is the most temperamental and should be loaded after the VGP and Vanilla Plants Extended.
+
+If you are having irreconcilable issues it might just be better to use the original Muesli mod: https://steamcommunity.com/sharedfiles/filedetails/?id=2175602170
+
+Note: My Muesli mods are not compatible with each other.
+
+Please let me know of other current version-compatible mods that have fruits and grains that aren't covered yet.
+
+This should be safe to add to an existing game, but if your other mods categorize raw ingredients then there might be issues and some (probably ignorable) errors or warnings. Let me know on github. Removing is another story but the errors should be ignorable.
+
+github: https://github.com/meldra/rimworldmod-muesli-plus
+
+If you want a mod that has the whole set of vegan stove-craftable meals, check out my other mod Beyond Impossible Meals: https://steamcommunity.com/sharedfiles/filedetails/?id=2177980416
+
+If you want your very own vegans and vegetarians, check out Treehuggers: https://steamcommunity.com/sharedfiles/filedetails/?id=2186638480
+
+If you want to thank me with more than just words, hit up my ko-fi: https://ko-fi.com/elkyelky 
+
+    </description>
+	<incompatibleWith>
+		<li>elkyelky.Muesli</li>
+	</incompatibleWith>
+</ModMetaData>

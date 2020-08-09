@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Vanilla Plants Expanded</li>
+			<li>[1.0, 1.1] RimCuisine 2 Core</li>
+			<li>VGP Vegetable Garden</li>
+		</mods>
+        <nomatch Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>			
+                <li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="RawBerries"]</xpath>
+					<value>
+						<thingCategories Inherit="false">
+							<li>Muesli_Fruits</li>
+						</thingCategories>
+					</value>
+                </li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="RawAgave"]</xpath>
+					<value>
+						<thingCategories Inherit="false">
+							<li>Muesli_Fruits</li>
+						</thingCategories>
+					</value>
+                </li>
+			</operations>
+        </nomatch>
+	</Operation>
+	
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>[1.0, 1.1] RimCuisine 2 Core</li>
+		</mods>
+		<nomatch Class="PatchOperationSequence">
+			<success>Always</success>
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="RawRice"]</xpath>
+					<value>
+						<thingCategories Inherit="false">
+							<li>Muesli_Grains</li>
+						</thingCategories>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="RawCorn"]</xpath>
+					<value>
+						<thingCategories Inherit="false">
+							<li>Muesli_Grains</li>
+						</thingCategories>
+					</value>
+				</li>
+			</operations>
+        </nomatch>
+	</Operation>
+</Patch>

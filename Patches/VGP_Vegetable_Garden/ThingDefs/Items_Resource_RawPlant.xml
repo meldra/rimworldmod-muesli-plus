@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+  <!-- If VGP Vegetable Garden is installed, we need to do their grain.-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+              <li>VGP Vegetable Garden</li>
+		</mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+				<!-- fix recipes for VCE -->
+			    <li Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[@Name="MakeMuesli"]/fixedIngredientFilter/categories</xpath>
+					<value>
+						<li>FruitFoodRaw</li>
+					</value>
+                </li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[@Name="MakeMuesli"]/defaultIngredientFilter/categories</xpath>
+					<value>
+						<li>FruitFoodRaw</li>
+					</value>
+                </li>
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef[defName="Make_Muesli"]/ingredients/li[1]/filter/categories/li[1]</xpath>
+					<value>
+						<li>FruitFoodRaw</li>
+					</value>
+                </li>
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef[defName="Make_Muesli_Bulk"]/ingredients/li[1]/filter/categories/li[1]</xpath>
+					<value>
+						<li>FruitFoodRaw</li>
+					</value>
+                </li>
+				<!-- recategorize VGP's barley into our grain category -->
+                <li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="RawBarley"]</xpath>
+					<value>
+						<thingCategories Inherit="false">
+							<li>Muesli_Grains</li>
+						</thingCategories>
+					</value>
+                </li>
+            </operations>
+        </match>
+	</Operation>
+</Patch>

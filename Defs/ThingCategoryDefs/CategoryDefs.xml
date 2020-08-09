@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+      <ThingCategoryDef>
+        <defName>Muesli_Fruits</defName>
+        <label>Raw fruits</label>
+        <parent>PlantFoodRaw</parent>
+        <iconPath>Things/Item/Resource/PlantFoodRaw/Berries</iconPath>
+      </ThingCategoryDef>
+	  
+	  <ThingCategoryDef>
+        <defName>Muesli_Grains</defName>
+        <label>Raw grains</label>
+        <parent>PlantFoodRaw</parent>
+        <iconPath>Things/Item/Resource/PlantFoodRaw/Corn</iconPath>
+      </ThingCategoryDef>
+</Defs>

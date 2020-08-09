@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ResearchProjectDef[defName="Pemmican"]/label</xpath>
+		<value>
+			<label>pemmican and muesli</label>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ResearchProjectDef[defName="Pemmican"]/description</xpath>
+		<value>
+			<description>Make pemmican, a preserved mixture of meat and plant matter that doesn't go bad for a long time, or muesli, a mix of toasted grain and dried fruits. Great for traveling.</description>
+			</value>
+	</Operation>
+
+</Patch>

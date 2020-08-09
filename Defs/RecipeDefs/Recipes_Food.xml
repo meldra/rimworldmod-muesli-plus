@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <RecipeDef Name="MakeMuesli" Abstract="True">
+    <fixedIngredientFilter>
+      <categories>
+        <li>Muesli_Fruits</li>
+        <li>Muesli_Grains</li>
+      </categories>
+      <specialFiltersToDisallow>
+        <li>AllowPlantFood</li>
+      </specialFiltersToDisallow>
+    </fixedIngredientFilter>
+    <defaultIngredientFilter>
+	   <categories>
+		<li>Muesli_Fruits</li>
+		<li>Muesli_Grains</li>
+	   </categories>
+      <disallowedCategories>
+        <li>MeatRaw</li>
+        <li>AnimalProductRaw</li>
+       </disallowedCategories>
+       <disallowedThingDefs>
+         <li>InsectJelly</li>
+         <li>Milk</li>
+         <li>RawFungus</li>
+         <li>RawPotatoes</li>
+        </disallowedThingDefs>
+      </defaultIngredientFilter>
+      <workSkill>Cooking</workSkill>
+    </RecipeDef>
+
+    <RecipeDef ParentName="MakeMuesli">
+    <defName>Make_Muesli</defName>
+    <label>make muesli</label>
+    <description>Make muesli, a blend of toasted grain and dried fruit</description>
+    <jobString>Making muesli.</jobString>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>Muesli_Fruits</li>
+          </categories>
+        </filter>
+        <count>0.25</count>
+      </li>
+      <li>
+        <filter>
+          <categories>
+            <li>Muesli_Grains</li>
+          </categories>
+        </filter>
+        <count>0.25</count>
+      </li>
+    </ingredients>
+    <products>
+      <Muesli>16</Muesli>
+    </products>
+        <recipeUsers>
+            <li>ElectricStove</li>
+            <li>FueledStove</li>
+            <li>Campfire</li>
+        </recipeUsers>
+    <researchPrerequisite>Pemmican</researchPrerequisite>
+  </RecipeDef>
+  
+  <!-- bulk (x4) -->
+  
+    <RecipeDef ParentName="MakeMuesli">
+    <defName>Make_Muesli_Bulk</defName>
+    <label>make muesli (x4)</label>
+    <description>Make muesli, a blend of toasted grain and dried fruit</description>
+    <jobString>Making muesli.</jobString>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>Muesli_Fruits</li>
+          </categories>
+        </filter>
+        <count>1</count>
+      </li>
+      <li>
+        <filter>
+          <categories>
+            <li>Muesli_Grains</li>
+          </categories>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <products>
+      <Muesli>64</Muesli>
+    </products>
+        <recipeUsers>
+            <li>ElectricStove</li>
+            <li>FueledStove</li>
+            <li>Campfire</li>
+        </recipeUsers>
+    <researchPrerequisite>Pemmican</researchPrerequisite>
+  </RecipeDef>
+  
+</Defs>

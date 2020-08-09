@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+<!-- If RimCuisine 2 Core is installed, let it do the categories.-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+			<li>[1.0, 1.1] RimCuisine 2 Core</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+			<!-- fix recipes for RC2 -->
+			    <li Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[@Name="MakeMuesli"]/fixedIngredientFilter/categories</xpath>
+					<value>
+						<li>RC2_FruitsRaw</li>
+						<li>RC2_GrainsRaw</li>	
+						<li>RC2_FruitProcessed</li>
+					</value>
+                </li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[@Name="MakeMuesli"]/defaultIngredientFilter/categories</xpath>
+					<value>
+						<li>RC2_FruitsRaw</li>
+						<li>RC2_GrainsRaw</li>
+						<li>RC2_FruitProcessed</li>						
+					</value>
+                </li>
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef[defName="Make_Muesli"]/ingredients/li[1]/filter/categories/li[1]</xpath>
+					<value>
+						<li>RC2_FruitsRaw</li>
+						<li>RC2_FruitProcessed</li>						
+					</value>
+                </li>
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef[defName="Make_Muesli"]/ingredients/li[2]/filter/categories/li[1]</xpath>
+					<value>
+						<li>RC2_GrainsRaw</li>					
+					</value>
+                </li>
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef[defName="Make_Muesli_Bulk"]/ingredients/li[1]/filter/categories/li[1]</xpath>
+					<value>
+						<li>RC2_FruitsRaw</li>
+						<li>RC2_FruitProcessed</li>					
+					</value>
+                </li>
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef[defName="Make_Muesli_Bulk"]/ingredients/li[2]/filter/categories/li[1]</xpath>
+					<value>
+						<li>RC2_GrainsRaw</li>					
+					</value>
+                </li>
+            </operations>
+        </match>		
+    </Operation> 
+</Patch>

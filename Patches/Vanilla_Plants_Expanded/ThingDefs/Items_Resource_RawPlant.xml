@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+  <!-- If Vanilla Plants Expanded is installed, we need to do the grains but put the fruits in VCE's.-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+              <li>Vanilla Plants Expanded</li>
+		</mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+				<!-- fix recipes for VCE -->
+			    <li Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[@Name="MakeMuesli"]/fixedIngredientFilter/categories</xpath>
+					<value>
+						<li>VCE_Fruit</li>
+					</value>
+                </li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[@Name="MakeMuesli"]/defaultIngredientFilter/categories</xpath>
+					<value>
+						<li>VCE_Fruit</li>
+					</value>
+                </li>
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef[defName="Make_Muesli"]/ingredients/li[1]/filter/categories/li[1]</xpath>
+					<value>
+						<li>VCE_Fruit</li>
+					</value>
+                </li>
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef[defName="Make_Muesli_Bulk"]/ingredients/li[1]/filter/categories/li[1]</xpath>
+					<value>
+						<li>VCE_Fruit</li>
+					</value>
+                </li>
+				<!-- recategorize vanilla fruits into VCE category -->
+				<li Class="PatchOperationFindMod">
+					<mods>
+						<li>[1.0, 1.1] RimCuisine 2 Core</li>
+					</mods>
+					<nomatch Class="PatchOperationSequence">
+						<success>Always</success>
+						<operations>
+							<li Class="PatchOperationAdd">
+								<xpath>/Defs/ThingDef[defName="RawBerries"]</xpath>
+								<value>
+									<thingCategories Inherit="false">
+										<li>VCE_Fruit</li>
+									</thingCategories>
+								</value>
+							</li>
+							<li Class="PatchOperationAdd">
+								<xpath>/Defs/ThingDef[defName="RawAgave"]</xpath>
+								<value>
+									<thingCategories Inherit="false">
+										<li>VCE_Fruit</li>
+									</thingCategories>
+								</value>
+							</li>
+						</operations>
+					</nomatch>
+				</li>
+            </operations>
+        </match>
+	</Operation>
+</Patch>
